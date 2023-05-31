@@ -4,33 +4,27 @@
 void ft_print_comb(void)
 {
     char pri = '0';
-    char seg = pri + 1;
-    char ter = seg + 1;
+    char seg = '1';
+    char ter = '2';
     while(pri <= '7')
     {
-        while(ter < '9')
-        {
-            write(1,&pri,1);
-            write(1,&seg,1);
-            write(1,&ter,1);
-            write(1," ",1);
-            ter++;
-        }
-        ter =seg + 1;
-        while(seg < '8')
-        {
-            write(1,&pri,1);
-            write(1,&seg,1);
-            write(1,&ter,1);
-            write(1," ",1);
-            seg++;
-        }
-        seg = pri + 1;
         write(1,&pri,1);
         write(1,&seg,1);
         write(1,&ter,1);
         write(1," ",1);
-        pri++;
+        if(ter < ':')
+            ter++;
+        if(seg <= '8' && ter >= ':')
+        {
+            seg++;
+            ter = seg + 1;
+        }            
+        if (pri <= '7' && seg >= '9')
+        {
+            pri++;
+            seg = pri + 1;
+            ter = seg + 1;
+        }
     }
 
 }
