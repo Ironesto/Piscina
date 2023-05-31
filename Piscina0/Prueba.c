@@ -1,30 +1,47 @@
-#include <stdio.h>
 #include <unistd.h>
 
-int ft_putchar (char c)
+void	ft_putchar(char c)
 {
 	write (1, &c, 1);
-	return (0);
 }
 
-int ft_print_reverse_alphabet(void)
+void	ft_print(int i, int j, int k)
 {
-	char letter;
-	
-	letter = 'z';
+	ft_putchar(i);
+	ft_putchar(j);
+	ft_putchar(k);
+	ft_putchar(',');
+	ft_putchar(' ');
+}
 
-	while ( letter >= 'a')
+
+void	ft_print_comb(void)
+{
+	int i;
+	int j;
+	int k;
+
+	i = '0';
+	j = '1';
+	k = '2';
+
+	while (i < ('6' + 1))
 	{
-		ft_putchar(letter);
-		letter--;
+		while (j < ('7' + 1))
+		{
+			while (k < ('8' + 1))
+			{
+				ft_print( i, j, k);
+				k++;
+			}
+			k = ++j + 1;
+		}
+		j = ++i ;
 	}
-
-	write (1,"\n",1);
-	
 }
 
-int main(void)
+int main(int argc, const char *argv[])
 {
-	ft_print_reverse_alphabet();
-	return (0);
+	ft_print_comb();
+	return 0;
 }
