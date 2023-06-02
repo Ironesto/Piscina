@@ -1,21 +1,39 @@
-void ft_print_comb()
+#include <unistd.h>
+#include <stdio.h>
+
+
+int main(void)
 {
-    char i, j, k;
-    i = '0';
-    while(i <= 7){
-        i++;
-        j = i+1;
-        while(j <= 8){
-            j++;
-        
-            k = j+1;
-            while(k <= 9){
-                k++;
-                    ft_putchar(i);
-                    ft_putchar(j);
-                    ft_putchar(k);
-                    ft_putchar(',');
-                    ft_putchar(' ');
+    char pri = '0';
+    char seg = '0';
+    char ter = '0';
+    char cua = '1';
+        while (pri <= '9')
+        {
+            while(seg <= '9')
+            {
+                while(ter <= '9')
+                {
+                    while(cua <= '9')
+                    {
+                        write(1,&pri,1);
+                        write(1,&seg,1);
+                        write(1,"-",1);
+                        write(1,&ter,1);
+                        write(1,&cua,1);
+                        write(1," ",1);
+                        cua++;
+                    }
+                    cua = '0';
+                    ter++;
+                }
+                ter =pri;
+                seg++;
+                cua = seg + 1;
             }
-            }
+            cua = '1';
+            seg = '0';
+            pri++;
+            ter = pri;
         }
+}
