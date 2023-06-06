@@ -8,8 +8,7 @@ void ft_ft (int *nbr)
 
 int main (void)
 {
-    int x;
-    int *ptr = &x;
-    ft_ft(ptr);
-    printf("%d",*ptr);
+    int ptr;
+    ft_ft(&ptr);
+    printf("%d",ptr);
 }
