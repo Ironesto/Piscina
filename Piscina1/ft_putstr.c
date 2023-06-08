@@ -6,7 +6,7 @@ void ft_putstr(char *str)
     while(*str != '\0')
     {
         write(1,str,1);
-        str++;
+        *str++;
     }
 }
 
@@ -15,4 +15,3 @@ int main (void)
     char *str = "hola mundi";
     ft_putstr(str);
 }
-//comentario
