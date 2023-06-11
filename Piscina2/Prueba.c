@@ -1,30 +1,23 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 
-char    *ft_strcpy(char *s1, char *s2)
-  {
-      int i;
- 
-      i = 0;
-      while (s2[i])
-      {
-          s1[i] = s2[i]; // so this will make s1 = to whatever s2 is looping through the string
-          i++;
-      }
-      s1[i] = s2[i];  // now that we are finsihing looping though s1[i] will equal s2[i]
-      return (s1);
-  }
-  
- // adding a main function here try it out and see what happens
-
-int main(void)
+char *ft_str_is_strcapitalize(char *str)
 {
-	char str1[] = "Flavio";
-	char str2[] = "Gaucssho";
+    int c = 0;
+    while(str[c])
+    {
+        if(str[c] >= 'a' && str[c] <= 'z')
+        {
+            if ((str[c - 1]  < 'a' || str[c - 1] > 'z') && (str[c - 1]  < 'A' || str[c - 1] > 'Z'))
+                str[c] = str[c] - 32;
+        }
+        c++;
+    }
+    return(str);
+}
 
-	printf("%s\n", str1);   // displaying what str1 is before ft_strcpy is used on it
-	ft_strcpy(str1, str2);  // calling out functtion ft_strcpy on the strings
-	printf("%s\n", str1);  // str1 should now become str2
-	return (0);
+int main (void)
+{
+    char str[] = "hola mundo";
+    printf("%s\n",ft_str_is_strcapitalize(str));
 }

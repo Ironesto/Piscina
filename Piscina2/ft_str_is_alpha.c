@@ -12,7 +12,6 @@ int ft_str_is_alpha(char *str)
             if(str[c] < 'a' || str[c] > 'z')
                 res = 0;
         }
-
         c++;
     }
     return(res);
