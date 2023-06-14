@@ -1,3 +1,4 @@
 Piscina00 -> 08
 Piscina01 -> 08
 Piscina02 -> 10, 11, 12
+Piscina03 -> 01(no se que me pide)
