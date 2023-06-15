@@ -1,6 +1,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
+
+
 char *ft_strstr(char *str, char *to_find)
 {
     int c = 0;
