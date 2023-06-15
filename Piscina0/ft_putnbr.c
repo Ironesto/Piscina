@@ -11,27 +11,20 @@ char ft_conver(int num)
 
 void ft_putnbr(int nb)
 {
-    int cont = 0;
     int nb2 = nb;
     int control = nb;
     while( nb > 10)
-    {
         nb = nb / 10;
-        cont++;
-    }
     ft_conver(nb);
-    while( cont > 0)
+    while(nb < control)
     {
         nb = nb * 10;
         while (nb2 > nb * 10)
-        {
             nb2 = nb2 / 10;
-        }
         nb2 = nb2 - nb;
         nb = nb + nb2;
         ft_conver(nb2);
         nb2 = control;
-        cont--;
     }
 }
 
