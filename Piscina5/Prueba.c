@@ -1,21 +1,16 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int		ft_recursive_factorial(int nb)
+    int	ft_fibonacci(int index)
 {
-    int c;
-    //while(nb > 0)
-    //{
-        if(c == 0)
-            c = 1;
-        nb = nb * c;
-        c = ft_recursive_factorial(nb - 1);
-        printf("%d\n", nb);
-    //}
-    return(c);
+    int ant = 0;
+    int num = 1;
+    num = num + ant;
+    return(ft_fibonacci(index - 1));
 }
 
 int main(void)
 {
-    printf("%d",ft_recursive_factorial(10));
+    printf("%d\n",ft_fibonacci(5));
+    return(0);
 }
