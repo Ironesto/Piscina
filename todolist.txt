@@ -3,3 +3,4 @@ Piscina01 -> 08
 Piscina02 -> 10, 11, 12
 Piscina03 -> 01(no se que me pide)
 Piscina04 -> 04(pereza), 05(ni lo he mirado)
+Piscina05 -> 02(copiado)
