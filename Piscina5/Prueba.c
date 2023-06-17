@@ -3,20 +3,18 @@
 
 int	ft_is_prime(int nb)
 {
-    int c;
-    int a = 1;
-    while(nb > 0)
-        c = ft_is_prime(nb - 1);
-    while(c < nb && c * a <= nb / 2)
+    int n = 2;
+    while(n < nb - 1 && nb % n != 0)
         {
-        a++;
-        printf("En c : %d x %d\n",c,a);
+            
+        n++;
+        printf("%d\n",n);
         }
-    return(1);
+    if(nb % n != 0)
+        printf("Primo\n");
 }
-
 int main(void)
 {
-    printf("Resultado : %d\n",ft_is_prime(77));
+    printf("Resultado : %d\n",ft_is_prime(20));
     return(0);
 }

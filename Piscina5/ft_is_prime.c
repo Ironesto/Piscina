@@ -27,5 +27,5 @@ int main(void)
     return(0);
 }
 
-/*  if(m % N != 0) Aumentando N llega un momento en que si es 0 no es primo. Mejor que todo lo escrito arriba.
+/*  MIRAR PRUEBA.C .if(m % N != 0) Aumentando N llega un momento en que si es 0 no es primo. Mejor que todo lo escrito arriba.
     Hacer lo mismo para next_prime*/
