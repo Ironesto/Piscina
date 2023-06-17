@@ -27,3 +27,12 @@ int main(void)
     ft_atoi("-+----adf901234-90fj-g45g");
     return(0);
 }
+
+/*int main(void)
+{
+    int n = 7;
+    int m = 77;
+    printf("%d",m % n);
+    if(m % n > 0)
+        printf("   Primo");
+}*/
