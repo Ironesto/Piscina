@@ -13,8 +13,9 @@ int main(int argc , char *argv[])
             c++;
         }
         c = 0;
-        write(1," ",1);
         a++;
+        if(a < argc)
+			write(1," ",1);
     }
     return(0);
 }
